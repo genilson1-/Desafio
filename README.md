@@ -44,7 +44,36 @@ Se todos os passos acima tiverem ocorridos como sucesso, a aplicação está pro
 
 * Para a utilização do serviço é necessário manipular cookies para manter a sessão aberta e ter acesso ao serviço.
 
+* No banco foram cadastrados 2000 entradas que segue o seguinte modelo: {"maria1900": 1900, "cpf": 10000001900, "dividas": [1901, 1902, 1903]}]'.
+
+* A chave de busca será o cpf que pode variar de 10000000000 até 10000001999.
+
 * A ferramenta escolhida para demostração foi o requests do python.
 
+#### Autenticação
+
+* Autenticando e capturando o cookie:
+	
+	import requests
+	from requests.auth import HTTPBasicAuth
+	import json	
+
+	login = requests.get('https://localhost/login', auth=HTTPBasicAuth('user1', 'pass1'), verify=False)
+
+* Pegando o cookie:
+
+	cookie = {'Cookie': login.headers['Set-Cookie']}
+
+* Fazendo nova requisição para consumir os dados:
+
+	 dados = requests.get('https://localhost/?cpf=10000001000', headers=cookie, verify=False)
+
+* Convertendo os dados para um dict:
+
+	 dadosDict = json.loads(dados.content)
+
+* Acessando o campo cpf:
+
+	cpf = dadosDict[0]['cpf']
 
 
