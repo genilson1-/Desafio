@@ -53,33 +53,53 @@ Se todos os passos acima tiverem ocorridos como sucesso, a aplicação está pro
 #### Autenticação
 
 * Autenticando e capturando o cookie:
-	
+
+```python	
+
 	import requests
 	from requests.auth import HTTPBasicAuth
 	import json	
 
 	login = requests.get('https://localhost/login', auth=HTTPBasicAuth('user1', 'pass1'), verify=False)
 
+```
+
 #### Setando o Cookie
 
 * Pegando o cookie:
 
+```python
+
 	cookie = {'Cookie': login.headers['Set-Cookie']}
+
+```
 
 #### Consumindo API
 
 * Fazendo nova requisição para consumir os dados:
 
+```python
+
 	 dados = requests.get('https://localhost/?cpf=10000001000', headers=cookie, verify=False)
+
+```
 
 #### Manipulando os dados como Dict
 
 * Convertendo os dados para um dict:
 
+```python
+
 	 dadosDict = json.loads(dados.content)
+
+```
 
 * Acessando o campo cpf:
 
+```python
+
 	cpf = dadosDict[0]['cpf']
+
+```
 
 
