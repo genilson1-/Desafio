@@ -60,13 +60,19 @@ Se todos os passos acima tiverem ocorridos como sucesso, a aplicação está pro
 
 	login = requests.get('https://localhost/login', auth=HTTPBasicAuth('user1', 'pass1'), verify=False)
 
+#### Setando o Cookie
+
 * Pegando o cookie:
 
 	cookie = {'Cookie': login.headers['Set-Cookie']}
 
+#### Consumindo API
+
 * Fazendo nova requisição para consumir os dados:
 
 	 dados = requests.get('https://localhost/?cpf=10000001000', headers=cookie, verify=False)
+
+#### Manipulando os dados como Dict
 
 * Convertendo os dados para um dict:
 
