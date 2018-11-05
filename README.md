@@ -30,7 +30,7 @@ Instalando as dependencias do python com pip:
 
 Populando o banco:
 
-	$ python dadosMongo
+	$ python dadosMongo.py
 
 
 ### Executando:
