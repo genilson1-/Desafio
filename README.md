@@ -35,7 +35,7 @@ Dois códigos (api.py e bancoService.py) deverão ser executados, como mostrado 
 
 ### Usando:
 
-Se todos os passos acima tiverem ocorridos com sucesso, a aplicação está pronta para ser testada. Antes de começar, alguns considerações devem ser feitas:
+Se todos os passos acima tiverem ocorridos com sucesso, a aplicação está pronta para ser testada. Antes de começar, algumas considerações devem ser feitas:
 * O bancoService.py (onde fica a conexao com o banco mongo) por motivo de segurança só aceita conexão local host. 
 
 * E um certificado foi gerado. Talvez seja necessário utilizar algo como validate_cert=False. 
