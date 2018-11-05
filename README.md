@@ -48,7 +48,7 @@ Se todos os passos acima tiverem ocorridos com sucesso, a aplicação está pron
 
 * A chave de busca será o cpf que pode variar de 10000000000 até 10000001999.
 
-* A ferramenta escolhida para demostração foi o requests do python.
+* A ferramenta escolhida para demonstração foi o requests do python.
 
 ### Autenticação
 
