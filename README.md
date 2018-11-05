@@ -1,6 +1,6 @@
 # Desafio
 
-Prerequisites
+Pré-requisitos
 ----------------------
 Para rodar o WS é necessário ter o mongodb instalado e rodando na porta 27017.
 
@@ -35,22 +35,22 @@ Dois códigos (api.py e bancoService.py) deverão ser executados, como mostrado 
 
 ### Usando:
 
-Se todos os passos acima tiverem ocorridos como sucesso, a aplicação está pronta para ser testada. Antes de começar, alguns considerações devem ser feitas:
+Se todos os passos acima tiverem ocorridos com sucesso, a aplicação está pronta para ser testada. Antes de começar, alguns considerações devem ser feitas:
 * O bancoService.py (onde fica a conexao com o banco mongo) por motivo de segurança só aceita conexão local host. 
 
-* E um certificado foi gerado. Talvez seja necessário utilizarum validate_cert=False. 
+* E um certificado foi gerado. Talvez seja necessário utilizar algo como validate_cert=False. 
 
-* Para diminiuir um pouco a complexidade de montar o ambiente, e por falta de tempo o usuário e senha estão declarados no início do código como texto limpo (user1, pass1).
+* Para diminiuir um pouco a complexidade de montar o ambiente e por falta de tempo, o usuário e senha estão declarados no início do código como texto limpo (user1, pass1).
 
 * Para a utilização do serviço é necessário manipular cookies para manter a sessão aberta e ter acesso ao serviço.
 
-* No banco foram cadastrados 2000 entradas que segue o seguinte modelo: {"maria1900": 1900, "cpf": 10000001900, "dividas": [1901, 1902, 1903]}]'.
+* No banco foram cadastrados 2000 entradas que seguem o seguinte modelo: {"maria1900": 1900, "cpf": 10000001900, "dividas": [1901, 1902, 1903]}]'.
 
 * A chave de busca será o cpf que pode variar de 10000000000 até 10000001999.
 
 * A ferramenta escolhida para demostração foi o requests do python.
 
-#### Autenticação
+### Autenticação
 
 * Autenticando e capturando o cookie:
 
@@ -102,4 +102,9 @@ Se todos os passos acima tiverem ocorridos como sucesso, a aplicação está pro
 
 ```
 
+### Teste
 
+* Para executar os teste basta executar o código tests.py:
+	
+	$ python tests.py
+	
