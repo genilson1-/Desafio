@@ -8,6 +8,10 @@ Instalando as dependencias do python (lembrando, o python usado foi a versao 3.7
 
 ### Instalando:
 
+Depois de instalar o mongodb, e colocar ele para rodar, é necessário criar o payload que será consultado pela nossa aplicação.
+Um script python com nome dadosMongo.py estará disponível para ser executado:
+	
+
 Fazer o clone do projeto:
 
 	$ git clone https://github.com/genilson1-/Desafio.git	
@@ -23,6 +27,10 @@ Ativar o ambiente virtual:
 Instalando as dependencias do python com pip:
 
 	$ pip install -r requeriments.txt
+
+Populando o banco:
+
+	$ python dadosMongo
 
 
 ### Executando:
